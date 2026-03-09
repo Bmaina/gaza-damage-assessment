@@ -19,6 +19,8 @@ It uses the **DOFA** foundation model to segment land cover in pre and post-even
 | 🟠 Major Damage | Orange | Significant class change — partial collapse likely |
 | 🔴 Destroyed | Red | Changed to bare soil / rubble — total loss |
 
+**Key insight:** Damage manifests as land cover change. A residential block that becomes bare soil has been destroyed. DOFA detects this change at scale, automatically — no manual annotation required at inference time.
+
 ---
 
 ## 🛰️ Data Source — Maxar Open Data Program
@@ -37,24 +39,61 @@ This is the same imagery used by:
 
 ---
 
+## 🔄 How the Pipeline Works
+
+```
+📅 Pre-event image (Oct 2023)       📅 Post-event image (Jan 2024)
+Maxar 50cm RGB                  →   Maxar 50cm RGB
+        ↓                                   ↓
+   Chip into 64x64 patches           Chip into 64x64 patches
+        ↓                                   ↓
+   DOFA Segmentation               DOFA Segmentation
+        ↓                                   ↓
+   Land cover class per chip        Land cover class per chip
+                ↓                   ↓
+           Compare pre vs post class
+                ↓
+   0 — No Damage
+   1 — Minor Damage
+   2 — Major Damage
+   3 — Destroyed
+                ↓
+   Full-scene damage map (voting across overlapping chips)
+   + Damage summary CSV (chip count and % per class)
+```
+
+---
+
 ## 📊 Results
 
-### VHR Imagery Comparison
+> ⚠️ **Note: The visualisations below use synthetic data generated for pipeline testing purposes.**
+> The synthetic scenes simulate 50cm VHR urban imagery with realistic road networks, building
+> blocks, and rubble patterns — but are **not real satellite imagery**.
+>
+> The pipeline architecture, DOFA inference logic, damage classification, and all visualisation
+> outputs are **fully operational** and designed to work identically with real Maxar imagery.
+>
+> **To run with real data:** download pre and post-event scenes from
+> [maxar.com/open-data](https://www.maxar.com/open-data) → Gaza Conflict 2023, save as
+> `data/raw/gaza_pre_event.tif` and `data/raw/gaza_post_event.tif`, then re-run
+> notebooks `02` → `03` → `04`.
+
+### VHR Imagery Comparison — Pre vs Post Event
 ![VHR Comparison](outputs/damage/01_vhr_comparison.png)
 
-### DOFA Segmentation
+### DOFA Land Cover Segmentation — Pre vs Post
 ![Segmentation](outputs/damage/02_segmentation_comparison.png)
 
-### Damage Map
+### Building Damage Map
 ![Damage Map](outputs/damage/03_damage_map.png)
 
 ### Damage Distribution
 ![Distribution](outputs/damage/04_damage_distribution.png)
 
-### Chip Examples by Damage Class
+### Example Chips by Damage Class
 ![Examples](outputs/damage/05_chip_examples.png)
 
-### Summary
+### Summary Card
 ![Summary](outputs/damage/06_summary_card.png)
 
 ---
@@ -69,19 +108,32 @@ cd gaza-damage-assessment
 
 ### 2. Install dependencies
 ```bash
-pip install -r requirements.txt
+pip install torch torchvision rasterio pillow numpy pandas matplotlib segmentation-models-pytorch
+pip install -e ../geo-deep-learning   # or update sys.path in notebook 03
 ```
 
 ### 3. Run notebooks in order
 
 | Notebook | What it does |
 |---|---|
-| `01_download_data.ipynb` | Downloads Maxar Open Data imagery. Falls back to synthetic demo data if unavailable. |
-| `02_prepare_scenes.ipynb` | Normalises imagery, aligns pre/post scenes, chips into 64×64 DOFA patches |
-| `03_assess_damage.ipynb` | Runs DOFA inference on all chips, classifies damage, reconstructs full-scene map |
+| `01_download_data.ipynb` | Attempts Maxar Open Data download. Falls back to synthetic demo data automatically if unavailable. |
+| `02_prepare_scenes.ipynb` | Normalises imagery, aligns pre/post scenes, chips into 64x64 DOFA patches with 75% overlap |
+| `03_assess_damage.ipynb` | Loads DOFA checkpoint, runs inference on all chips, classifies damage severity, reconstructs full-scene map |
 | `04_visualise.ipynb` | Produces all 6 visualisation outputs |
 
-> ⚠️ Update `CHECKPOINT_PATH` in `03_assess_damage.ipynb` to point to your DOFA checkpoint.
+> ⚠️ Update `CHECKPOINT_PATH` in `03_assess_damage.ipynb` to point to your trained DOFA checkpoint.
+
+### 4. To use real Maxar imagery (recommended)
+
+1. Go to **[maxar.com/open-data](https://www.maxar.com/open-data)**
+2. Click **Gaza Conflict 2023**
+3. Download one **pre-event** scene (October 2023) and one **post-event** scene (January 2024)
+4. Save to:
+   - `data/raw/gaza_pre_event.tif`
+   - `data/raw/gaza_post_event.tif`
+5. Re-run notebooks `02` → `03` → `04`
+
+Alternatively, use the **UNOSAT data portal** at [unosat.org](https://www.unosat.org) for pre-clipped Gaza GeoTIFF scenes with smaller file sizes.
 
 ---
 
@@ -89,34 +141,43 @@ pip install -r requirements.txt
 
 ```
 gaza-damage-assessment/
-├── 01_download_data.ipynb
-├── 02_prepare_scenes.ipynb
-├── 03_assess_damage.ipynb
-├── 04_visualise.ipynb
+├── 01_download_data.ipynb       # Download Maxar imagery or generate synthetic data
+├── 02_prepare_scenes.ipynb      # Normalise, align, chip into 64x64 patches
+├── 03_assess_damage.ipynb       # DOFA inference + damage classification
+├── 04_visualise.ipynb           # All 6 visualisation outputs
 ├── data/
 │   ├── raw/
-│   │   ├── gaza_pre_event.tif    # Maxar pre-event (Oct 2023)
-│   │   └── gaza_post_event.tif   # Maxar post-event (Jan 2024)
+│   │   ├── gaza_pre_event.tif   # Maxar pre-event (Oct 2023) — replace with real data
+│   │   └── gaza_post_event.tif  # Maxar post-event (Jan 2024) — replace with real data
 │   ├── prepared/
-│   │   ├── pre_rgb.tif
-│   │   ├── post_rgb.tif
-│   │   └── chips_meta.json
+│   │   ├── pre_rgb.tif          # Normalised pre-event scene
+│   │   ├── post_rgb.tif         # Normalised post-event scene
+│   │   └── chips_meta.json      # Chip coordinates and paths
 │   └── chips/
-│       ├── pre/                  # 64×64 pre-event patches
-│       └── post/                 # 64×64 post-event patches
+│       ├── pre/                 # 64x64 pre-event patches (.npy)
+│       └── post/                # 64x64 post-event patches (.npy)
 └── outputs/damage/
-    ├── damage_map.tif
-    ├── damage_results.csv
-    └── 0*_*.png                  # Visualisations
+    ├── damage_map.tif           # Full-scene damage raster
+    ├── damage_results.csv       # Per-chip damage classification
+    └── 0*_*.png                 # Visualisation outputs
 ```
 
 ---
 
 ## 🧠 Model
 
-Uses **DOFA** (Dynamic One-For-All), a Vision Transformer pretrained on millions of satellite images. Fine-tuned on EuroSAT for land cover segmentation — applied here with no retraining.
+Uses **DOFA** (Dynamic One-For-All), a 140M parameter Vision Transformer foundation model pretrained on millions of multi-sensor satellite images. Fine-tuned on the EuroSAT benchmark for land cover segmentation — applied here **without retraining**.
 
-**Key insight:** Damage manifests as land cover change. A residential block that becomes bare soil has been destroyed. DOFA detects this change at scale, automatically.
+This demonstrates a core principle of foundation models: **train once, deploy anywhere.**
+
+| Parameter | Value |
+|---|---|
+| Total parameters | 140M |
+| Trainable (decoder only) | 35M |
+| Encoder | Frozen |
+| Input size | 64x64 patches |
+| Wavelengths | R=0.665um, G=0.549um, B=0.481um |
+| Output | 10 land cover classes |
 
 ---
 
@@ -129,21 +190,36 @@ Uses **DOFA** (Dynamic One-For-All), a Vision Transformer pretrained on millions
 | 🔥 **Wildfire** | Map burned structures for insurance and recovery planning |
 | 🌍 **Earthquake** | Assess collapse patterns for search and rescue |
 | 💰 **Insurance** | Automated damage quantification for claims processing |
+| 🏗️ **Reconstruction** | Identify areas needing rebuilding for recovery planning |
 
 ---
 
 ## 📚 References
 
 - **DOFA Foundation Model** — [huggingface.co/earthflow/DOFA](https://huggingface.co/earthflow/DOFA)
-- **Maxar Open Data** — [maxar.com/open-data](https://www.maxar.com/open-data)
-- **UNOSAT Gaza Assessment** — [unosat.org](https://www.unosat.org)
-- **geo-deep-learning** — [github.com/NRCan/geo-deep-learning](https://github.com/NRCan/geo-deep-learning)
+- **Maxar Open Data Program** — [maxar.com/open-data](https://www.maxar.com/open-data)
+- **UNOSAT Gaza Damage Assessment** — [unosat.org](https://www.unosat.org)
+- **geo-deep-learning** — NRCan: [github.com/NRCan/geo-deep-learning](https://github.com/NRCan/geo-deep-learning)
+- **Sentinel-2 / Copernicus** — ESA: [sentinel.esa.int](https://sentinel.esa.int)
+
+---
+
+## 🗂️ Related Projects
+
+This is part of a GeoAI portfolio series built on the DOFA foundation model:
+
+| Project | Description |
+|---|---|
+| [dofa-eurosat-segmentation](https://github.com/Bmaina/dofa-eurosat-segmentation) | Land cover classification on Sentinel-2 using EuroSAT |
+| [amazon-change-detection](https://github.com/Bmaina/amazon-change-detection) | Amazon deforestation mapping using DOFA change detection |
+| **gaza-damage-assessment** | Building damage classification from conflict imagery — you are here |
 
 ---
 
 <div align="center">
   <strong>Built by Benson M. Gachaga</strong><br/>
-  Data Scientist | GeoAI Practitioner | Remote Sensing Specialist<br/><br/>
+  Data Scientist | GeoAI Practitioner | Remote Sensing Specialist<br/>
+  MBA · M.S. Geoinformation & Earth Observation · PMP · Microsoft Certified Power BI<br/><br/>
   <a href="https://linkedin.com/in/bensonmgachaga">LinkedIn</a> &nbsp;·&nbsp;
   <a href="https://github.com/Bmaina">GitHub</a>
 </div>
