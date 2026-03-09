@@ -1,0 +1,442 @@
+chip_id,y,x,pre_class,post_class,damage_class,damage_label
+0,0,0,Highway,Highway,0,No Damage
+1,0,48,Highway,Highway,0,No Damage
+2,0,96,Highway,Highway,0,No Damage
+3,0,144,Annual Crop,Annual Crop,0,No Damage
+4,0,192,Highway,Forest,1,Minor Damage
+5,0,240,Highway,Highway,0,No Damage
+6,0,288,Highway,Highway,0,No Damage
+7,0,336,Highway,Annual Crop,1,Minor Damage
+8,0,384,Annual Crop,Annual Crop,0,No Damage
+9,0,432,Highway,Highway,0,No Damage
+10,0,480,Highway,Forest,1,Minor Damage
+11,0,528,Highway,Forest,1,Minor Damage
+12,0,576,Highway,Forest,1,Minor Damage
+13,0,624,Annual Crop,Annual Crop,0,No Damage
+14,0,672,Highway,Forest,1,Minor Damage
+15,0,720,Highway,Forest,1,Minor Damage
+16,0,768,Highway,Highway,0,No Damage
+17,0,816,Highway,Highway,0,No Damage
+18,0,864,Annual Crop,Annual Crop,0,No Damage
+19,0,912,Highway,Highway,0,No Damage
+20,0,960,Highway,Highway,0,No Damage
+21,48,0,Highway,Highway,0,No Damage
+22,48,48,Highway,Highway,0,No Damage
+23,48,96,Highway,Highway,0,No Damage
+24,48,144,Annual Crop,Annual Crop,0,No Damage
+25,48,192,Highway,Annual Crop,1,Minor Damage
+26,48,240,Highway,Highway,0,No Damage
+27,48,288,Highway,Highway,0,No Damage
+28,48,336,Highway,Annual Crop,1,Minor Damage
+29,48,384,Annual Crop,Forest,1,Minor Damage
+30,48,432,Highway,Highway,0,No Damage
+31,48,480,Highway,Highway,0,No Damage
+32,48,528,Highway,Annual Crop,1,Minor Damage
+33,48,576,Highway,Highway,0,No Damage
+34,48,624,Annual Crop,Annual Crop,0,No Damage
+35,48,672,Highway,Forest,1,Minor Damage
+36,48,720,Highway,Forest,1,Minor Damage
+37,48,768,Highway,Forest,1,Minor Damage
+38,48,816,Highway,Annual Crop,1,Minor Damage
+39,48,864,Annual Crop,Annual Crop,0,No Damage
+40,48,912,Highway,Forest,1,Minor Damage
+41,48,960,Highway,Forest,1,Minor Damage
+42,96,0,Highway,Highway,0,No Damage
+43,96,48,Highway,Highway,0,No Damage
+44,96,96,Highway,Highway,0,No Damage
+45,96,144,Annual Crop,Annual Crop,0,No Damage
+46,96,192,Highway,Highway,0,No Damage
+47,96,240,Highway,Highway,0,No Damage
+48,96,288,Highway,Highway,0,No Damage
+49,96,336,Highway,Annual Crop,1,Minor Damage
+50,96,384,Annual Crop,Annual Crop,0,No Damage
+51,96,432,Highway,Highway,0,No Damage
+52,96,480,Highway,Highway,0,No Damage
+53,96,528,Highway,Highway,0,No Damage
+54,96,576,Highway,Annual Crop,1,Minor Damage
+55,96,624,Annual Crop,Annual Crop,0,No Damage
+56,96,672,Highway,Annual Crop,1,Minor Damage
+57,96,720,Highway,Forest,1,Minor Damage
+58,96,768,Highway,Forest,1,Minor Damage
+59,96,816,Highway,Annual Crop,1,Minor Damage
+60,96,864,Annual Crop,Annual Crop,0,No Damage
+61,96,912,Highway,Annual Crop,1,Minor Damage
+62,96,960,Highway,Annual Crop,1,Minor Damage
+63,144,0,Highway,Highway,0,No Damage
+64,144,48,Highway,Highway,0,No Damage
+65,144,96,Annual Crop,Highway,1,Minor Damage
+66,144,144,Annual Crop,Annual Crop,0,No Damage
+67,144,192,Highway,Highway,0,No Damage
+68,144,240,Highway,Highway,0,No Damage
+69,144,288,Highway,Highway,0,No Damage
+70,144,336,Annual Crop,Highway,1,Minor Damage
+71,144,384,Annual Crop,Annual Crop,0,No Damage
+72,144,432,Highway,Highway,0,No Damage
+73,144,480,Highway,Highway,0,No Damage
+74,144,528,Highway,Highway,0,No Damage
+75,144,576,Annual Crop,Annual Crop,0,No Damage
+76,144,624,Annual Crop,Annual Crop,0,No Damage
+77,144,672,Highway,Highway,0,No Damage
+78,144,720,Highway,Forest,1,Minor Damage
+79,144,768,Highway,Annual Crop,1,Minor Damage
+80,144,816,Highway,Annual Crop,1,Minor Damage
+81,144,864,Annual Crop,Annual Crop,0,No Damage
+82,144,912,Highway,Highway,0,No Damage
+83,144,960,Highway,Highway,0,No Damage
+84,192,0,Highway,Forest,1,Minor Damage
+85,192,48,Highway,Highway,0,No Damage
+86,192,96,Highway,Highway,0,No Damage
+87,192,144,Annual Crop,Annual Crop,0,No Damage
+88,192,192,Highway,Highway,0,No Damage
+89,192,240,Highway,Forest,1,Minor Damage
+90,192,288,Highway,Forest,1,Minor Damage
+91,192,336,Highway,Residential,1,Minor Damage
+92,192,384,Annual Crop,Annual Crop,0,No Damage
+93,192,432,Highway,Highway,0,No Damage
+94,192,480,Highway,Forest,1,Minor Damage
+95,192,528,Highway,Annual Crop,1,Minor Damage
+96,192,576,Highway,Residential,1,Minor Damage
+97,192,624,Annual Crop,Annual Crop,0,No Damage
+98,192,672,Highway,Highway,0,No Damage
+99,192,720,Highway,Highway,0,No Damage
+100,192,768,Highway,Highway,0,No Damage
+101,192,816,Highway,Highway,0,No Damage
+102,192,864,Annual Crop,Annual Crop,0,No Damage
+103,192,912,Highway,Highway,0,No Damage
+104,192,960,Highway,Forest,1,Minor Damage
+105,240,0,Highway,Highway,0,No Damage
+106,240,48,Highway,Highway,0,No Damage
+107,240,96,Highway,Highway,0,No Damage
+108,240,144,Annual Crop,Annual Crop,0,No Damage
+109,240,192,Highway,Highway,0,No Damage
+110,240,240,Highway,Highway,0,No Damage
+111,240,288,Highway,Highway,0,No Damage
+112,240,336,Highway,Highway,0,No Damage
+113,240,384,Annual Crop,Annual Crop,0,No Damage
+114,240,432,Highway,Highway,0,No Damage
+115,240,480,Highway,Forest,1,Minor Damage
+116,240,528,Highway,Highway,0,No Damage
+117,240,576,Highway,Highway,0,No Damage
+118,240,624,Annual Crop,Annual Crop,0,No Damage
+119,240,672,Highway,Residential,1,Minor Damage
+120,240,720,Highway,Forest,1,Minor Damage
+121,240,768,Highway,Highway,0,No Damage
+122,240,816,Highway,Annual Crop,1,Minor Damage
+123,240,864,Annual Crop,Annual Crop,0,No Damage
+124,240,912,Highway,Residential,1,Minor Damage
+125,240,960,Highway,Highway,0,No Damage
+126,288,0,Highway,Highway,0,No Damage
+127,288,48,Highway,Highway,0,No Damage
+128,288,96,Highway,Annual Crop,1,Minor Damage
+129,288,144,Annual Crop,Annual Crop,0,No Damage
+130,288,192,Highway,Highway,0,No Damage
+131,288,240,Highway,Forest,1,Minor Damage
+132,288,288,Highway,Highway,0,No Damage
+133,288,336,Highway,Annual Crop,1,Minor Damage
+134,288,384,Annual Crop,Annual Crop,0,No Damage
+135,288,432,Highway,Annual Crop,1,Minor Damage
+136,288,480,Highway,Highway,0,No Damage
+137,288,528,Highway,Highway,0,No Damage
+138,288,576,Highway,Highway,0,No Damage
+139,288,624,Annual Crop,Annual Crop,0,No Damage
+140,288,672,Highway,Annual Crop,1,Minor Damage
+141,288,720,Highway,Forest,1,Minor Damage
+142,288,768,Highway,Highway,0,No Damage
+143,288,816,Highway,Annual Crop,1,Minor Damage
+144,288,864,Annual Crop,Forest,1,Minor Damage
+145,288,912,Highway,Annual Crop,1,Minor Damage
+146,288,960,Highway,Highway,0,No Damage
+147,336,0,Highway,Highway,0,No Damage
+148,336,48,Highway,Annual Crop,1,Minor Damage
+149,336,96,Highway,Annual Crop,1,Minor Damage
+150,336,144,Annual Crop,Annual Crop,0,No Damage
+151,336,192,Highway,Highway,0,No Damage
+152,336,240,Highway,Forest,1,Minor Damage
+153,336,288,Highway,Highway,0,No Damage
+154,336,336,Highway,Highway,0,No Damage
+155,336,384,Annual Crop,Annual Crop,0,No Damage
+156,336,432,Highway,Forest,1,Minor Damage
+157,336,480,Highway,Highway,0,No Damage
+158,336,528,Highway,Highway,0,No Damage
+159,336,576,Industrial,Highway,2,Major Damage
+160,336,624,Annual Crop,Highway,1,Minor Damage
+161,336,672,Highway,Highway,0,No Damage
+162,336,720,Highway,Highway,0,No Damage
+163,336,768,Highway,Annual Crop,1,Minor Damage
+164,336,816,Highway,Annual Crop,1,Minor Damage
+165,336,864,Annual Crop,Annual Crop,0,No Damage
+166,336,912,Highway,Highway,0,No Damage
+167,336,960,Highway,Highway,0,No Damage
+168,384,0,Highway,Highway,0,No Damage
+169,384,48,Highway,Highway,0,No Damage
+170,384,96,Annual Crop,Highway,1,Minor Damage
+171,384,144,Annual Crop,Highway,1,Minor Damage
+172,384,192,Highway,Highway,0,No Damage
+173,384,240,Highway,Highway,0,No Damage
+174,384,288,Highway,Highway,0,No Damage
+175,384,336,Highway,Annual Crop,1,Minor Damage
+176,384,384,Annual Crop,Annual Crop,0,No Damage
+177,384,432,Highway,Annual Crop,1,Minor Damage
+178,384,480,Highway,Highway,0,No Damage
+179,384,528,Highway,Annual Crop,1,Minor Damage
+180,384,576,Annual Crop,Industrial,1,Minor Damage
+181,384,624,Annual Crop,Annual Crop,0,No Damage
+182,384,672,Highway,Highway,0,No Damage
+183,384,720,Highway,Forest,1,Minor Damage
+184,384,768,Highway,Annual Crop,1,Minor Damage
+185,384,816,Highway,Annual Crop,1,Minor Damage
+186,384,864,Annual Crop,Annual Crop,0,No Damage
+187,384,912,Highway,Annual Crop,1,Minor Damage
+188,384,960,Highway,Forest,1,Minor Damage
+189,432,0,Highway,Highway,0,No Damage
+190,432,48,Highway,Highway,0,No Damage
+191,432,96,Highway,Highway,0,No Damage
+192,432,144,Annual Crop,Annual Crop,0,No Damage
+193,432,192,Highway,Highway,0,No Damage
+194,432,240,Highway,Highway,0,No Damage
+195,432,288,Highway,Forest,1,Minor Damage
+196,432,336,Highway,Highway,0,No Damage
+197,432,384,Annual Crop,Annual Crop,0,No Damage
+198,432,432,Highway,Forest,1,Minor Damage
+199,432,480,Highway,Highway,0,No Damage
+200,432,528,Highway,Highway,0,No Damage
+201,432,576,Highway,Highway,0,No Damage
+202,432,624,Annual Crop,Highway,1,Minor Damage
+203,432,672,Highway,Forest,1,Minor Damage
+204,432,720,Highway,Highway,0,No Damage
+205,432,768,Highway,Highway,0,No Damage
+206,432,816,Highway,Highway,0,No Damage
+207,432,864,Annual Crop,Annual Crop,0,No Damage
+208,432,912,Highway,Highway,0,No Damage
+209,432,960,Highway,Highway,0,No Damage
+210,480,0,Highway,Forest,1,Minor Damage
+211,480,48,Highway,Highway,0,No Damage
+212,480,96,Highway,Highway,0,No Damage
+213,480,144,Annual Crop,Annual Crop,0,No Damage
+214,480,192,Highway,Forest,1,Minor Damage
+215,480,240,Highway,Highway,0,No Damage
+216,480,288,Highway,Forest,1,Minor Damage
+217,480,336,Highway,Highway,0,No Damage
+218,480,384,Annual Crop,Annual Crop,0,No Damage
+219,480,432,Highway,Forest,1,Minor Damage
+220,480,480,Highway,Highway,0,No Damage
+221,480,528,Highway,Forest,1,Minor Damage
+222,480,576,Highway,Forest,1,Minor Damage
+223,480,624,Annual Crop,Annual Crop,0,No Damage
+224,480,672,Highway,Forest,1,Minor Damage
+225,480,720,Highway,Highway,0,No Damage
+226,480,768,Highway,Forest,1,Minor Damage
+227,480,816,Highway,Annual Crop,1,Minor Damage
+228,480,864,Annual Crop,Annual Crop,0,No Damage
+229,480,912,Highway,Highway,0,No Damage
+230,480,960,Highway,Forest,1,Minor Damage
+231,528,0,Highway,Forest,1,Minor Damage
+232,528,48,Highway,Highway,0,No Damage
+233,528,96,Highway,Highway,0,No Damage
+234,528,144,Annual Crop,Annual Crop,0,No Damage
+235,528,192,Highway,Forest,1,Minor Damage
+236,528,240,Highway,Highway,0,No Damage
+237,528,288,Highway,Forest,1,Minor Damage
+238,528,336,Highway,Annual Crop,1,Minor Damage
+239,528,384,Annual Crop,Annual Crop,0,No Damage
+240,528,432,Highway,Highway,0,No Damage
+241,528,480,Highway,Highway,0,No Damage
+242,528,528,Highway,Forest,1,Minor Damage
+243,528,576,Highway,Annual Crop,1,Minor Damage
+244,528,624,Annual Crop,Annual Crop,0,No Damage
+245,528,672,Highway,Annual Crop,1,Minor Damage
+246,528,720,Highway,Residential,1,Minor Damage
+247,528,768,Highway,Forest,1,Minor Damage
+248,528,816,Highway,Highway,0,No Damage
+249,528,864,Annual Crop,Annual Crop,0,No Damage
+250,528,912,Highway,Forest,1,Minor Damage
+251,528,960,Highway,Forest,1,Minor Damage
+252,576,0,Highway,Forest,1,Minor Damage
+253,576,48,Highway,Annual Crop,1,Minor Damage
+254,576,96,Industrial,Highway,2,Major Damage
+255,576,144,Annual Crop,Annual Crop,0,No Damage
+256,576,192,Highway,Residential,1,Minor Damage
+257,576,240,Highway,Highway,0,No Damage
+258,576,288,Highway,Highway,0,No Damage
+259,576,336,Highway,Annual Crop,1,Minor Damage
+260,576,384,Annual Crop,Annual Crop,0,No Damage
+261,576,432,Highway,Highway,0,No Damage
+262,576,480,Highway,Highway,0,No Damage
+263,576,528,Highway,Highway,0,No Damage
+264,576,576,Highway,Annual Crop,1,Minor Damage
+265,576,624,Annual Crop,Annual Crop,0,No Damage
+266,576,672,Highway,Highway,0,No Damage
+267,576,720,Highway,Forest,1,Minor Damage
+268,576,768,Highway,Highway,0,No Damage
+269,576,816,Highway,Highway,0,No Damage
+270,576,864,Annual Crop,Highway,1,Minor Damage
+271,576,912,Highway,Forest,1,Minor Damage
+272,576,960,Highway,Forest,1,Minor Damage
+273,624,0,Highway,Highway,0,No Damage
+274,624,48,Highway,Highway,0,No Damage
+275,624,96,Highway,Annual Crop,1,Minor Damage
+276,624,144,Annual Crop,Annual Crop,0,No Damage
+277,624,192,Highway,Annual Crop,1,Minor Damage
+278,624,240,Highway,Forest,1,Minor Damage
+279,624,288,Highway,Highway,0,No Damage
+280,624,336,Annual Crop,Annual Crop,0,No Damage
+281,624,384,Annual Crop,Annual Crop,0,No Damage
+282,624,432,Highway,Forest,1,Minor Damage
+283,624,480,Highway,Forest,1,Minor Damage
+284,624,528,Highway,Highway,0,No Damage
+285,624,576,Annual Crop,Annual Crop,0,No Damage
+286,624,624,Annual Crop,Annual Crop,0,No Damage
+287,624,672,Highway,Highway,0,No Damage
+288,624,720,Highway,Highway,0,No Damage
+289,624,768,Highway,Highway,0,No Damage
+290,624,816,Annual Crop,Annual Crop,0,No Damage
+291,624,864,Annual Crop,Annual Crop,0,No Damage
+292,624,912,Highway,Forest,1,Minor Damage
+293,624,960,Highway,Forest,1,Minor Damage
+294,672,0,Highway,Forest,1,Minor Damage
+295,672,48,Highway,Forest,1,Minor Damage
+296,672,96,Highway,Highway,0,No Damage
+297,672,144,Annual Crop,Annual Crop,0,No Damage
+298,672,192,Highway,Forest,1,Minor Damage
+299,672,240,Highway,Highway,0,No Damage
+300,672,288,Highway,Forest,1,Minor Damage
+301,672,336,Highway,Residential,1,Minor Damage
+302,672,384,Annual Crop,Annual Crop,0,No Damage
+303,672,432,Highway,Highway,0,No Damage
+304,672,480,Highway,Forest,1,Minor Damage
+305,672,528,Highway,Highway,0,No Damage
+306,672,576,Highway,Highway,0,No Damage
+307,672,624,Annual Crop,Annual Crop,0,No Damage
+308,672,672,Highway,Highway,0,No Damage
+309,672,720,Highway,Highway,0,No Damage
+310,672,768,Highway,Forest,1,Minor Damage
+311,672,816,Highway,Annual Crop,1,Minor Damage
+312,672,864,Annual Crop,Annual Crop,0,No Damage
+313,672,912,Highway,Highway,0,No Damage
+314,672,960,Highway,Highway,0,No Damage
+315,720,0,Highway,Highway,0,No Damage
+316,720,48,Highway,Highway,0,No Damage
+317,720,96,Highway,Highway,0,No Damage
+318,720,144,Annual Crop,Annual Crop,0,No Damage
+319,720,192,Highway,Highway,0,No Damage
+320,720,240,Highway,Highway,0,No Damage
+321,720,288,Highway,Forest,1,Minor Damage
+322,720,336,Highway,Highway,0,No Damage
+323,720,384,Annual Crop,Annual Crop,0,No Damage
+324,720,432,Highway,Forest,1,Minor Damage
+325,720,480,Highway,Forest,1,Minor Damage
+326,720,528,Highway,Highway,0,No Damage
+327,720,576,Highway,Annual Crop,1,Minor Damage
+328,720,624,Annual Crop,Annual Crop,0,No Damage
+329,720,672,Highway,Forest,1,Minor Damage
+330,720,720,Highway,Highway,0,No Damage
+331,720,768,Highway,Highway,0,No Damage
+332,720,816,Highway,Highway,0,No Damage
+333,720,864,Annual Crop,Highway,1,Minor Damage
+334,720,912,Highway,Forest,1,Minor Damage
+335,720,960,Highway,Forest,1,Minor Damage
+336,768,0,Highway,Highway,0,No Damage
+337,768,48,Highway,Highway,0,No Damage
+338,768,96,Highway,Highway,0,No Damage
+339,768,144,Annual Crop,Annual Crop,0,No Damage
+340,768,192,Highway,Forest,1,Minor Damage
+341,768,240,Highway,Highway,0,No Damage
+342,768,288,Highway,Annual Crop,1,Minor Damage
+343,768,336,Highway,Highway,0,No Damage
+344,768,384,Annual Crop,Annual Crop,0,No Damage
+345,768,432,Highway,Annual Crop,1,Minor Damage
+346,768,480,Highway,Forest,1,Minor Damage
+347,768,528,Highway,Highway,0,No Damage
+348,768,576,Highway,Highway,0,No Damage
+349,768,624,Annual Crop,Annual Crop,0,No Damage
+350,768,672,Highway,Highway,0,No Damage
+351,768,720,Highway,Highway,0,No Damage
+352,768,768,Highway,Highway,0,No Damage
+353,768,816,Highway,Highway,0,No Damage
+354,768,864,Annual Crop,Annual Crop,0,No Damage
+355,768,912,Highway,Annual Crop,1,Minor Damage
+356,768,960,Highway,Forest,1,Minor Damage
+357,816,0,Highway,Highway,0,No Damage
+358,816,48,Highway,Highway,0,No Damage
+359,816,96,Highway,Annual Crop,1,Minor Damage
+360,816,144,Annual Crop,Annual Crop,0,No Damage
+361,816,192,Highway,Annual Crop,1,Minor Damage
+362,816,240,Highway,Highway,0,No Damage
+363,816,288,Highway,Annual Crop,1,Minor Damage
+364,816,336,Highway,Highway,0,No Damage
+365,816,384,Annual Crop,Annual Crop,0,No Damage
+366,816,432,Highway,Highway,0,No Damage
+367,816,480,Highway,Highway,0,No Damage
+368,816,528,Highway,Highway,0,No Damage
+369,816,576,Highway,Highway,0,No Damage
+370,816,624,Annual Crop,Annual Crop,0,No Damage
+371,816,672,Highway,Highway,0,No Damage
+372,816,720,Highway,Highway,0,No Damage
+373,816,768,Highway,Highway,0,No Damage
+374,816,816,Highway,Highway,0,No Damage
+375,816,864,Annual Crop,Annual Crop,0,No Damage
+376,816,912,Highway,Highway,0,No Damage
+377,816,960,Highway,Forest,1,Minor Damage
+378,864,0,Highway,Highway,0,No Damage
+379,864,48,Highway,Highway,0,No Damage
+380,864,96,Annual Crop,Annual Crop,0,No Damage
+381,864,144,Annual Crop,Annual Crop,0,No Damage
+382,864,192,Highway,Highway,0,No Damage
+383,864,240,Highway,Highway,0,No Damage
+384,864,288,Highway,Forest,1,Minor Damage
+385,864,336,Annual Crop,Industrial,1,Minor Damage
+386,864,384,Annual Crop,Annual Crop,0,No Damage
+387,864,432,Highway,Forest,1,Minor Damage
+388,864,480,Highway,Highway,0,No Damage
+389,864,528,Highway,Highway,0,No Damage
+390,864,576,Annual Crop,Annual Crop,0,No Damage
+391,864,624,Annual Crop,Annual Crop,0,No Damage
+392,864,672,Highway,Residential,1,Minor Damage
+393,864,720,Highway,Highway,0,No Damage
+394,864,768,Annual Crop,Highway,1,Minor Damage
+395,864,816,Highway,Highway,0,No Damage
+396,864,864,Annual Crop,Annual Crop,0,No Damage
+397,864,912,Highway,Forest,1,Minor Damage
+398,864,960,Highway,Highway,0,No Damage
+399,912,0,Highway,Highway,0,No Damage
+400,912,48,Highway,Highway,0,No Damage
+401,912,96,Highway,Highway,0,No Damage
+402,912,144,Annual Crop,Annual Crop,0,No Damage
+403,912,192,Highway,Forest,1,Minor Damage
+404,912,240,Highway,Forest,1,Minor Damage
+405,912,288,Highway,Highway,0,No Damage
+406,912,336,Highway,Highway,0,No Damage
+407,912,384,Annual Crop,Annual Crop,0,No Damage
+408,912,432,Highway,Forest,1,Minor Damage
+409,912,480,Highway,Highway,0,No Damage
+410,912,528,Highway,Highway,0,No Damage
+411,912,576,Highway,Highway,0,No Damage
+412,912,624,Annual Crop,Annual Crop,0,No Damage
+413,912,672,Highway,Highway,0,No Damage
+414,912,720,Highway,Highway,0,No Damage
+415,912,768,Highway,Forest,1,Minor Damage
+416,912,816,Highway,Highway,0,No Damage
+417,912,864,Annual Crop,Annual Crop,0,No Damage
+418,912,912,Highway,Forest,1,Minor Damage
+419,912,960,Highway,Forest,1,Minor Damage
+420,960,0,Highway,Highway,0,No Damage
+421,960,48,Highway,Highway,0,No Damage
+422,960,96,Highway,Annual Crop,1,Minor Damage
+423,960,144,Annual Crop,Annual Crop,0,No Damage
+424,960,192,Highway,Highway,0,No Damage
+425,960,240,Highway,Highway,0,No Damage
+426,960,288,Highway,Forest,1,Minor Damage
+427,960,336,Highway,Annual Crop,1,Minor Damage
+428,960,384,Annual Crop,Annual Crop,0,No Damage
+429,960,432,Highway,Highway,0,No Damage
+430,960,480,Highway,Highway,0,No Damage
+431,960,528,Highway,Highway,0,No Damage
+432,960,576,Highway,Highway,0,No Damage
+433,960,624,Annual Crop,Annual Crop,0,No Damage
+434,960,672,Highway,Highway,0,No Damage
+435,960,720,Highway,Forest,1,Minor Damage
+436,960,768,Highway,Highway,0,No Damage
+437,960,816,Highway,Highway,0,No Damage
+438,960,864,Annual Crop,Annual Crop,0,No Damage
+439,960,912,Highway,Annual Crop,1,Minor Damage
+440,960,960,Highway,Forest,1,Minor Damage
