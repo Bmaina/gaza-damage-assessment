@@ -1,0 +1,4 @@
+data/raw/ 
+data/chips/ 
+*.tif 
+__pycache__/ 
